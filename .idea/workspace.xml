@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="add requirements.txt">
-      <change afterPath="$PROJECT_DIR$/bin/main_menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resourses/data.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resourses/db_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resourses/settings.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="up">
+      <change beforePath="$PROJECT_DIR$/resourses/data.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resourses/db_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/db_controller.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +51,11 @@
     "last_opened_file_path": "C:/Users/plato/OneDrive/Документы/GitHub/WorldOfTanksDemake"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\plato\OneDrive\Документы\GitHub\WorldOfTanksDemake\data" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -95,12 +96,21 @@
       <option name="project" value="LOCAL" />
       <updated>1733235130815</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="up">
+      <option name="closed" value="true" />
+      <created>1733235411161</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733235411161</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hello" />
     <MESSAGE value="add requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="add requirements.txt" />
+    <MESSAGE value="up" />
+    <option name="LAST_COMMIT_MESSAGE" value="up" />
   </component>
 </project>
