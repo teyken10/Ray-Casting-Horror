@@ -1,3 +1,3 @@
 import pygame
 
-print('Hello World Of Tanks')
+print('Hello Lunch Lady')
