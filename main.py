@@ -1,3 +1,1 @@
-import pygame
-
-print('Hello Lunch Lady')
+print('just hello world')
