@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="up">
-      <change beforePath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/map.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ray_casting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +52,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main.executor": "Run",
+    "Python.main.py.executor": "Run",
+    "Python.player.executor": "Run",
+    "Python.settings.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "D:/Ray-Casting-Horror/.venv",
@@ -60,6 +66,7 @@
       <recent name="D:\Ray-Casting-Horror" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ray-Casting-Horror\bin" />
       <recent name="D:\Ray-Casting-Horror" />
       <recent name="C:\Users\plato\OneDrive\Документы\GitHub\WorldOfTanksDemake\data" />
     </key>
