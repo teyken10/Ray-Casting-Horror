@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="up">
-      <change afterPath="$PROJECT_DIR$/resourses/main.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resourses/open_door.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main_menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/db_controller.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resourses/settings.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ray_casting.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ray_casting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resourses/main.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resourses/open_door.mp3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +39,12 @@
     &quot;assignee&quot;: &quot;teyken10&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/teyken10/Ray-Casting-Horror.git&quot;,
-    &quot;accountId&quot;: &quot;c8258fba-5815-4756-8e5d-69136a4aefe1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/teyken10/Ray-Casting-Horror.git",
+    "accountId": "24ef6968-97cd-4195-9407-f581dcbfe82b"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -51,26 +54,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_menu.executor&quot;: &quot;Run&quot;,
-    &quot;Python.map.executor&quot;: &quot;Run&quot;,
-    &quot;Python.player.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Ray-Casting-Horror/resourses&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.game.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main.py.executor": "Run",
+    "Python.main_menu.executor": "Run",
+    "Python.map.executor": "Run",
+    "Python.player.executor": "Run",
+    "Python.settings.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Ray-Casting-Horror/resourses",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Ray-Casting-Horror\resourses" />
       <recent name="D:\Ray-Casting-Horror" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyFiles\Yandex Lyceum\Projects_2024_2025_Pygame\Ray-Casting-HorrorPlatonov" />
+      <recent name="D:\MyFiles\Yandex Lyceum\Projects_2024_2025_Pygame\Ray-Casting-HorrorPlatonov\resourses" />
       <recent name="D:\Ray-Casting-Horror\bin" />
       <recent name="D:\Ray-Casting-Horror" />
       <recent name="C:\Users\plato\OneDrive\Документы\GitHub\WorldOfTanksDemake\data" />
@@ -79,7 +85,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
       </set>
     </attachedChunks>
   </component>

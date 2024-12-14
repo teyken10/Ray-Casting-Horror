@@ -1,4 +1,4 @@
-from settings import *
+from bin.settings import *
 import pygame
 import math
 
@@ -7,10 +7,24 @@ class Player:
     def __init__(self):
         self.x, self.y = player_pos
         self.angle = player_angle
+        self.last_mouse_pos_x = None
 
     @property
     def pos(self):
         return (self.x, self.y)
+
+    def mouse_motion(self, pos_x):
+        if self.last_mouse_pos_x:
+            if self.last_mouse_pos_x > pos_x:
+                self.angle -= 0.01
+                self.last_mouse_pos_x = pos_x
+
+            elif self.last_mouse_pos_x < pos_x:
+                self.angle += 0.01
+                self.last_mouse_pos_x = pos_x
+
+        else:
+            self.last_mouse_pos_x = pos_x
 
     def movement(self):
         sin_a = math.sin(self.angle)

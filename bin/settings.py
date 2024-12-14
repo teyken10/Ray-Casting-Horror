@@ -1,18 +1,18 @@
 import math
 
 # настройки игры
-WIDTH = 1200
-HEIGHT = 800
+WIDTH = 1600
+HEIGHT = 900
 HALF_WIDTH = WIDTH // 2
 HALF_HEIGHT = HEIGHT // 2
-FPS = 165
+FPS = 60
 TILE = 100
 
 # настройки ray casting
 FOV = math.pi / 3
 HALF_FOV = FOV / 2
 NUM_RAYS = WIDTH // 10
-MAX_DEPTH = 800
+MAX_DEPTH = 1600
 DELTA_ANGLE = FOV / NUM_RAYS
 DIST = NUM_RAYS / (2 * math.tan(HALF_FOV))
 PROJ_COEFF = 3 * DIST * TILE
