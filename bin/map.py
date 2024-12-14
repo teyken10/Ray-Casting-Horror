@@ -1,19 +1,15 @@
-from settings import *
+from pprint import pprint
 
-mapa = [[1, 1, 1, 1, 1],
-        [1, 0, 0, 0, 1],
-        [1, 0, 0, 0, 1],
-        [1, 0, 0, 0, 1],
-        [1, 1, 1, 1, 1]]
+from settings import *
 
 text_map = [
     'WWWWWWWWWWWW',
-    'W..........W',
-    'W.WWWW...WWW',
-    'W..........W',
-    'W......WWWWW',
-    'W..........W',
     'W....W.....W',
+    'W..WWW.....W',
+    'W..........W',
+    'W..........W',
+    'W....WWWWWWW',
+    'W..........W',
     'WWWWWWWWWWWW'
 ]
 
@@ -22,3 +18,4 @@ for j, row in enumerate(text_map):
     for i, char in enumerate(row):
         if char == 'W':
             world_map.add((i * TILE, j * TILE))
+pprint(world_map)
