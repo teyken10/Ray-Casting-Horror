@@ -1,5 +1,3 @@
-from pprint import pprint
-
 from bin.settings import *
 
 text_map = [
@@ -18,4 +16,3 @@ for j, row in enumerate(text_map):
     for i, char in enumerate(row):
         if char == 'W':
             world_map.add((i * TILE, j * TILE))
-# pprint(world_map)

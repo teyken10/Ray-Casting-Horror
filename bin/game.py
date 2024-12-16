@@ -1,9 +1,8 @@
 import pygame
-
+import math
 from bin.settings import *
 from bin.player import Player
 from bin.ray_casting import ray_casting
-
 
 class Game:
     def run(self):
@@ -21,11 +20,16 @@ class Game:
                     exit()
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_ESCAPE:
-                        running = False
+                        running = False  # Выход из игры
+
                 if event.type == pygame.MOUSEMOTION:
                     player.mouse_motion(event.pos)
+                    print(event)
+                    print(event.pos)
+
                 else:
                     player.last_mouse_pos_x = (WIDTH // 2, HEIGHT // 2)
+
             player.movement()
             sc.fill(BLACK)
 
@@ -36,14 +40,14 @@ class Game:
 
             ray_casting(sc, player.pos, player.angle)
 
-            # pygame.draw.circle(sc, GREEN, (int(player.x), int(player.y)), 12)
-            # pygame.draw.line(sc, GREEN, player.pos, (player.x + WIDTH * math.cos(player.angle),
-            #                                          player.y + WIDTH * math.sin(player.angle)))
-            # for x, y in world_map:
-            #     pygame.draw.rect(sc, DARKGRAY, (x, y, TILE, TILE), 2)
-
             pygame.display.flip()
             clock.tick(FPS)
 
         pygame.mouse.set_visible(True)
         pygame.event.set_grab(False)
+
+        # Возвращаемся к главному меню
+        from bin.main_menu import MainMenu  # Импортируем здесь, чтобы избежать кругового импорта
+        main_menu = MainMenu()  # Создаем экземпляр MainMenu
+        main_menu.lobby_music.play(-1)  # Запускаем фоновую музыку
+        main_menu.run()  # Запускаем главное меню

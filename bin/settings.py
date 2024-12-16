@@ -1,8 +1,8 @@
 import math
 
 # настройки игры
-WIDTH = 1600
-HEIGHT = 900
+WIDTH = 1400
+HEIGHT = 800
 HALF_WIDTH = WIDTH // 2
 HALF_HEIGHT = HEIGHT // 2
 FPS = 60
@@ -21,7 +21,7 @@ SCALE = WIDTH // NUM_RAYS
 # настройки игрока
 player_pos = (HALF_WIDTH, HALF_HEIGHT)
 player_angle = 0
-player_speed = 1
+player_speed = 3
 
 # цвета
 WHITE = (255, 255, 255)

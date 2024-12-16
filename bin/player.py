@@ -16,15 +16,18 @@ class Player:
     def mouse_motion(self, pos_x):
         if self.last_mouse_pos_x:
             if self.last_mouse_pos_x > pos_x:
-                self.angle -= 0.01
+                self.angle -= 0.03
                 self.last_mouse_pos_x = pos_x
 
             elif self.last_mouse_pos_x < pos_x:
-                self.angle += 0.01
+                self.angle += 0.03
                 self.last_mouse_pos_x = pos_x
 
         else:
             self.last_mouse_pos_x = pos_x
+        if pos_x[0] < WIDTH // 80 or pos_x[0] > WIDTH - WIDTH // 80:
+            pygame.mouse.set_pos(HALF_WIDTH, HALF_HEIGHT)
+        print(self.last_mouse_pos_x)
 
     def movement(self):
         sin_a = math.sin(self.angle)
