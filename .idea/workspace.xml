@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="up">
-      <change afterPath="$PROJECT_DIR$/resources/OutrightHorrorBold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/code_pro_bold.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/ofont.ru_Unutterable.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/on_button.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/ui/button.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main_menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

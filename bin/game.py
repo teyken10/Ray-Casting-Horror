@@ -1,5 +1,4 @@
 import pygame
-import math
 from bin.settings import *
 from bin.player import Player
 from bin.ray_casting import ray_casting
