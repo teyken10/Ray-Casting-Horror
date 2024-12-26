@@ -22,6 +22,7 @@ SCALE = WIDTH // NUM_RAYS
 player_pos = (HALF_WIDTH, HALF_HEIGHT)
 player_angle = 0
 player_speed = 3
+rotate_speed = 0.02
 
 # цвета
 WHITE = (255, 255, 255)

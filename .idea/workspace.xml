@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="up">
-      <change afterPath="$PROJECT_DIR$/bin/ui/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/game_properties.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2024_16_57_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2024_16_57__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/audio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main_menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ui/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ui/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/ofont.ru_Unutterable.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/resources/main_font.ttf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +64,9 @@
     &quot;Python.player.executor&quot;: &quot;Run&quot;,
     &quot;Python.settings.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.main.py.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Ray-Casting-Horror/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Ray-Casting-Horror/main.py&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -131,8 +139,27 @@
       <option name="project" value="LOCAL" />
       <updated>1733319134660</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="up">
+      <option name="closed" value="true" />
+      <created>1734475446958</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734475446958</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hello" />

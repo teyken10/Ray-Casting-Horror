@@ -2,13 +2,19 @@ import pygame
 from bin.settings import *
 from bin.player import Player
 from bin.ray_casting import ray_casting
+from bin.audio import Audio
+
 
 class Game:
+    def __init__(self):
+        self.audio = Audio()
+        self.lobby_music = self.audio.run("resources/lobby_music.mp3")
+
     def run(self):
         pygame.mouse.set_visible(False)
         pygame.event.set_grab(True)
         pygame.init()
-        sc = pygame.display.set_mode((WIDTH, HEIGHT))
+        screen = pygame.display.set_mode((WIDTH, HEIGHT))
         clock = pygame.time.Clock()
         player = Player()
 
@@ -30,14 +36,14 @@ class Game:
                     player.last_mouse_pos_x = (WIDTH // 2, HEIGHT // 2)
 
             player.movement()
-            sc.fill(BLACK)
+            screen.fill(BLACK)
 
             pygame.display.set_caption(f'FPS: {math.trunc(clock.get_fps())}')
 
-            pygame.draw.rect(sc, BLUE, (0, 0, WIDTH, HALF_HEIGHT))
-            pygame.draw.rect(sc, DARKGRAY, (0, HALF_HEIGHT, WIDTH, HALF_HEIGHT))
+            pygame.draw.rect(screen, BLUE, (0, 0, WIDTH, HALF_HEIGHT))
+            pygame.draw.rect(screen, DARKGRAY, (0, HALF_HEIGHT, WIDTH, HALF_HEIGHT))
 
-            ray_casting(sc, player.pos, player.angle)
+            ray_casting(screen, player.pos, player.angle)
 
             pygame.display.flip()
             clock.tick(FPS)

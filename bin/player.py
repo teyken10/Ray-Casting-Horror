@@ -16,11 +16,11 @@ class Player:
     def mouse_motion(self, pos_x):
         if self.last_mouse_pos_x:
             if self.last_mouse_pos_x > pos_x:
-                self.angle -= 0.01
+                self.angle -= rotate_speed
                 self.last_mouse_pos_x = pos_x
 
             elif self.last_mouse_pos_x < pos_x:
-                self.angle += 0.01
+                self.angle += rotate_speed
                 self.last_mouse_pos_x = pos_x
 
         else:
@@ -47,6 +47,6 @@ class Player:
             self.x += -player_speed * sin_a
             self.y += player_speed * cos_a
         if keys[pygame.K_q]:
-            self.angle -= 0.02
+            self.angle -= rotate_speed * 2
         if keys[pygame.K_e]:
-            self.angle += 0.02
+            self.angle += rotate_speed * 2
