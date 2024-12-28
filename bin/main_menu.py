@@ -9,15 +9,14 @@ from bin.ui.button import Button
 
 
 class MainMenu:
-    def __init__(self):  # Конструктор класса
-        # Инициализация Pygame
-        pygame.init()
+    def __init__(self, resources):  # Конструктор класса
+        self.resources = resources
 
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
         pygame.display.set_caption("TeXnoPark Lobby")
 
         # Загрузка GIF и масштабирование его под размеры окна
-        self.gif_frames = self.load_gif('resources/main.gif')
+        self.gif_frames = self.resources.main_menu_frames
         self.num_frames = len(self.gif_frames)
 
         # Инициализация шрифта
@@ -34,20 +33,6 @@ class MainMenu:
         self.lobby_music.play(-1)
         print(pygame.RESIZABLE)
 
-    # Загрузка анимации из GIF
-    def load_gif(self, filename):
-        img = Image.open(filename)
-        frames = []
-        try:
-            while True:
-                frame = pygame.image.fromstring(img.tobytes(), img.size, img.mode)
-                frame = pygame.transform.scale(frame, (WIDTH, HEIGHT))  # Масштабируем кадр под начальное разрешение
-                frames.append(frame)
-                img.seek(len(frames))
-        except EOFError:
-            pass
-        return frames
-
     def run(self):
         # Основной цикл
         clock = pygame.time.Clock()
@@ -60,6 +45,7 @@ class MainMenu:
 
         running = True
         while running:
+            self.screen.fill(BLACK)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.lobby_music.stop()  # Остановить музыку при выходе
@@ -82,13 +68,16 @@ class MainMenu:
             if button.draw_button("Играть", (WIDTH - button_width) // 2, HEIGHT * 0.3, button_width, button_height,
                                   (0, 0, 0), (255, 0, 0)):
                 self.lobby_music.stop()  # Остановка музыки при заходе в игру
-                game = Game()
+                game = Game(self)
                 game.run()
 
             if button.draw_button("Настройки", (WIDTH - button_width) // 2, HEIGHT * 0.45, button_width, button_height,
                                   (0, 0, 0), (255, 0, 0)):
-                properties = Properties()
+                pygame.mouse.set_pos(0, 0)
+                self.screen.fill(BLACK)
+                properties = Properties(self.resources)
                 properties.run()
+                pygame.mouse.set_pos(0, 0)
 
             if button.draw_button("Выйти", (WIDTH - button_width) // 2, HEIGHT * 0.6, button_width, button_height,
                                   (0, 0, 0), (255, 0, 0)):

@@ -1,5 +1,13 @@
 import math
 
+
+class Settings:
+    def __init__(self):
+        self.width = 1400
+        self.height = 800
+
+settings = Settings()
+
 # настройки игры
 WIDTH = 1400
 HEIGHT = 800

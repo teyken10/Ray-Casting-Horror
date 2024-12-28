@@ -5,11 +5,12 @@ from bin.ui.button import Button
 
 
 class Properties:
-    def __init__(self):  # Конструктор класса
+    def __init__(self, resources):  # Конструктор класса
+        self.resources = resources
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
         pygame.display.set_caption("TeXnoPark Settings")
 
-        self.gif_frames = self.load_gif('resources/main.gif')
+        self.gif_frames = self.resources.main_menu_frames
         self.num_frames = len(self.gif_frames)
 
     def load_gif(self, filename):

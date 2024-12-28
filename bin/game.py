@@ -6,9 +6,10 @@ from bin.audio import Audio
 
 
 class Game:
-    def __init__(self):
+    def __init__(self, main_menu):
         self.audio = Audio()
         self.lobby_music = self.audio.run("resources/lobby_music.mp3")
+        self.main_menu = main_menu
 
     def run(self):
         pygame.mouse.set_visible(False)
@@ -52,7 +53,4 @@ class Game:
         pygame.event.set_grab(False)
 
         # Возвращаемся к главному меню
-        from bin.main_menu import MainMenu  # Импортируем здесь, чтобы избежать кругового импорта
-        main_menu = MainMenu()  # Создаем экземпляр MainMenu
-        main_menu.lobby_music.play(-1)  # Запускаем фоновую музыку
-        main_menu.run()  # Запускаем главное меню
+        self.main_menu.lobby_music.play(-1)
