@@ -30,8 +30,6 @@ class Game:
 
                 if event.type == pygame.MOUSEMOTION:
                     player.mouse_motion(event.pos)
-                    print(event)
-                    print(event.pos)
 
                 else:
                     player.last_mouse_pos_x = (WIDTH // 2, HEIGHT // 2)
