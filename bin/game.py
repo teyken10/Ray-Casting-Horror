@@ -8,7 +8,7 @@ from bin.audio import Audio
 class Game:
     def __init__(self, main_menu):
         self.audio = Audio()
-        self.lobby_music = self.audio.run("resources/lobby_music.mp3")
+        self.lobby_music = self.audio.run_music("resources/lobby_music.mp3", settings.volume_music / 100)
         self.main_menu = main_menu
 
     def run(self):

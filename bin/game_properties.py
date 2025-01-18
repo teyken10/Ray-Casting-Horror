@@ -70,13 +70,17 @@ class Properties:
 
             if button.draw_button("+", (WIDTH - button_width) // 2, HEIGHT * 0.45,
                                   button_width * 0.3, button_height):
-                self.audio.set_volume(min(self.audio.get_volume() + 0.1, 1.0))  # Ограничиваем до 1.0
+                if settings.volume_music < 100:
+                    settings.volume_music += 1
+                    self.audio.set_volume(settings.volume_music / 100)  # Ограничиваем до 1.0
 
             if button.draw_button("-", (WIDTH - button_width) // 2 * 1.47, HEIGHT * 0.45,
                                   button_width * 0.3, button_height):
-                self.audio.set_volume(max(self.audio.get_volume() - 0.1, 0.0))  # Ограничиваем до 0.0
+                if settings.volume_music > 0:
+                    settings.volume_music -= 1
+                    self.audio.set_volume(settings.volume_music / 100)  # Ограничиваем до 0.0
 
-            text = self.font.render(f'{int(self.audio.get_volume() * 100)}', True, (100, 255, 100))
+            text = self.font.render(f'{settings.volume_music}', True, (100, 255, 100))
             text_x = WIDTH // 2 - text.get_width() // 2
             text_y = HEIGHT // 2 - text.get_height() // 2
             self.screen.blit(text, (text_x, text_y))

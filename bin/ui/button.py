@@ -8,7 +8,7 @@ class Button:
         # Загрузка звука
         pygame.mixer.init()
         self.audio = Audio()
-        self.hover_sound = self.audio.run("resources/on_button.mp3")
+        self.hover_sound = self.audio.run_sound("resources/on_button.mp3", settings.volume_sound)
 
         # Загружаем изображение фона кнопки
         self.button_bg = pygame.image.load("resources/blood_button.png").convert_alpha()
@@ -19,9 +19,15 @@ class Button:
         self.screen = screen
         self.last_hovered_button = None  # Для хранения последней кнопки, на которую наведен курсор
 
+        self.time_motion = settings.fps // 5
+        self.time = 0
+
     def draw_button(self, text, x, y, width, height):
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()[0]  # Левый клик мыши
+        if not click:
+            self.time = 0
+            self.time_motion = settings.fps // 3
 
         # Проверяем, наведён ли курсор на кнопку
         if x <= mouse[0] <= x + width and y <= mouse[1] <= y + height:
@@ -34,7 +40,14 @@ class Button:
                 self.last_hovered_button = text
 
             if click:
-                return True
+                if self.time == 0:
+                    self.time += 1
+                    return True
+                elif self.time_motion <= self.time:
+                    self.time_motion = settings.fps // 12
+                    self.time = 0
+                else:
+                    self.time += 1
 
         # Отображаем текст кнопки
         label = self.font.render(text, True, (235, 235, 255))

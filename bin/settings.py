@@ -5,6 +5,9 @@ class Settings:
     def __init__(self):
         self.width = 1400
         self.height = 800
+        self.fps = 60
+        self.volume_music = 50
+        self.volume_sound = 50
 
 settings = Settings()
 

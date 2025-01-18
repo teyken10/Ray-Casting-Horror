@@ -26,13 +26,12 @@ class MainMenu:
 
         # Загрузка звука
         self.audio = Audio()
-        self.hover_sound = self.audio.run("resources/on_button.mp3")
-        self.lobby_music = self.audio.run("resources/lobby_music.mp3")
+        self.hover_sound = self.audio.run_sound("resources/on_button.mp3", settings.volume_sound / 100)
+        self.lobby_music = self.audio.run_music("resources/lobby_music.mp3", settings.volume_music / 100)
 
         self.last_hovered_button = None  # Для хранения последней кнопки, на которую наведен курсор
 
         # Проигрываем фоновую музыку
-        self.lobby_music.play(-1)
         print(pygame.RESIZABLE)
 
     def run(self):
