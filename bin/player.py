@@ -4,7 +4,7 @@ import math
 
 
 class Player:
-    def __init__(self):
+    def __init__(self, player_pos=(0, 0)):
         self.x, self.y = player_pos
         self.angle = player_angle
         self.last_mouse_pos_x = None

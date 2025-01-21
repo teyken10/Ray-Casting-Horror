@@ -1,8 +1,11 @@
+import threading
+
 import pygame
 from bin.settings import *
 from bin.player import Player
 from bin.ray_casting import ray_casting
 from bin.audio import Audio
+from bin.map import x_player, y_player
 
 
 class Game:
@@ -17,7 +20,7 @@ class Game:
         pygame.init()
         screen = pygame.display.set_mode((WIDTH, HEIGHT))
         clock = pygame.time.Clock()
-        player = Player()
+        player = Player(player_pos=(x_player, y_player))
 
         running = True
         while running:

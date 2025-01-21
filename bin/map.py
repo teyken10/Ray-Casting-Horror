@@ -1,77 +1,27 @@
 from bin.settings import *
 
 
-''' S - STAIR, D - DOOR, W - WALL, . - FREE SPACE, T - tHIRD FLOOR'''
-text_map = [
-    'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW',
-    'WT................D.....D.....W',
-    'W.................W.....W.....W',
-    'W.................W.....W.....W',
-    'W.................W.....W.....W',
-    'W.................W.....W.....W',
-    'W.................W.....W.....W',
-    'W.................WWWDWWWWWWDWW'
-    'WWWWWWWW..........D...........W'
-    'W......WWWWWWWWWWWWWWWWW......W'
-    'W......W...............W......W'
-    'W......W...............WWWWDWWW'
-    'W......W...............W......W'
-    'W......W...............W......W'
-    'W......W...............W......W'
-    'W......W...............W......W'
-    'W......W...............W......W'
-    'W......W...............W......W'
-    'W......W...............W......W'
-    'W......W...............W......W'
-    'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW'
-]
-second_floor = [
-    'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW'
-    'W......W.....W...........W..........W.....W'
-    'W......W.....W...........W..........W.....W'
-    'W......W.....W...........W..........W.....W'
-    'W......W.....W...........W..........W.....W'
-    'W......W.....W...........W..........W.....W'
-    'WWWWWDWWWWWWDWWWWWWWWWWDWWWDWWWWWWWWW.....W'
-    'W...W.............................D.......W'
-    'WT..D.............................W.......W'
-    'W...W.............................W.......W'
-    'WWWWWWWWWWDWWW.WWDWWWWDWWWWWW....WWWWWWWWWW'
-    'W............W.W...W........W....W........W'
-    'W............W.W...W........W....W........W'
-    'W............W.W...W........W.W..W........W'
-    'WWWWWWWWWWWWWWDWWWWWWWWWWWWWWDW..WWWWWWWWWW'
-    'W............W................W..W........W'
-    'W............W................W..W........W'
-    'W............W................W..W........W'
-    'W............W................W..W........W'
-    'W............W................W..W........W'
-    'W............W................W..W........W'
-    'W............W................W..W........W'
-    'WWWWDWWWWDWWWW................W..W........W'
-    'W............W................W..W........W'
-    'W............W................W..W........W'
-    'W............D................W..W........W'
-    'W............W................W..WWWWWWWWWW'
-    'W............W................W...........W'
-    'WWWWDWWWWDWWWWWWWWWWWWWWWWWWWWW...........W'
-    'W............W.S............S.WDWWWWWWWW..W'
-    'W............D.........................W..W'
-    'W............W.........................W..W'
-    'W............W.........................W..W'
-    'W............W.........................W..W'
-    'WWWWDWWWWDWWWW.........................WWWW'
-    'W............W............................W'
-    'W............W............................W'
-    'W............D............................W'
-    'W............W............................W'
-    'W............W............................W'
-    'W............W............................W'
-    'WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW'
-]
+''' S - STAIR, D - DOOR, W - WALL, . - FREE SPACE, T - tHIRD FLOOR, P - player'''
+first_floor = []
+with open('resources/maps/first_floor.txt', 'r', encoding='utf-8') as f:
+    first_floor = [row.rstrip() for row in f.readlines()]
+print(first_floor)
 
-world_map = set()
-for j, row in enumerate(text_map):
+second_floor = []
+with open('resources/maps/second_floor.txt', 'r', encoding='utf-8') as f:
+    second_floor = [row.rstrip() for row in f.readlines()]
+
+x_player = y_player = 0
+world_map = {
+    'W': set(),
+    'D': set(),
+    'S': set(),
+    'T': set()
+}
+for j, row in enumerate(first_floor):
     for i, char in enumerate(row):
-        if char != '.':
-            world_map.add((i * TILE, j * TILE))
+        if char == 'P':
+            x_player = i * TILE
+            y_player = j * TILE
+        elif char != '.' and char != 'P':
+            world_map[char].add((i * TILE, j * TILE))

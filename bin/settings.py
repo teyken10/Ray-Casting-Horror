@@ -33,7 +33,7 @@ SCALE = WIDTH // NUM_RAYS
 player_pos = 0, 0
 
 player_angle = 0
-player_speed = 10
+player_speed = 3
 rotate_speed = 0.02
 
 # цвета
