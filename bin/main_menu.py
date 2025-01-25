@@ -1,6 +1,6 @@
 import pygame
 import sys
-from bin.settings import *
+from bin.settings import settings
 from bin.game import Game
 from bin.game_properties import Properties
 from bin.audio import Audio
@@ -11,7 +11,7 @@ class MainMenu:
     def __init__(self, resources):  # Конструктор класса
         self.resources = resources
 
-        self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
+        self.screen = pygame.display.set_mode((settings.width, settings.height), pygame.RESIZABLE)
         pygame.display.set_caption("TeXnoPark Lobby")
 
         # Загрузка GIF и масштабирование его под размеры окна
@@ -22,7 +22,7 @@ class MainMenu:
         self.lobby_title = pygame.image.load("resources/texnopark_title.png").convert_alpha()
 
         # Инициализация шрифта
-        self.font = pygame.font.Font('resources/main_font.ttf', WIDTH // 40)
+        self.font = pygame.font.Font('resources/main_font.ttf', settings.width // 40)
 
         # Загрузка звука
         self.audio = Audio()
@@ -46,7 +46,7 @@ class MainMenu:
 
         running = True
         while running:
-            self.screen.fill(BLACK)
+            self.screen.fill(settings.black)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.lobby_music.stop()  # Остановить музыку при выходе
@@ -62,29 +62,29 @@ class MainMenu:
                 current_frame = (current_frame + 1) % self.num_frames  # Переход к следующему кадру
                 last_frame_time = current_time  # Обновляем время последнего кадра
 
-            scaled_lobby_title = pygame.transform.scale(self.lobby_title, (WIDTH // 3, HEIGHT // 5))
+            scaled_lobby_title = pygame.transform.scale(self.lobby_title, (settings.width // 3, settings.height // 5))
             self.screen.blit(scaled_lobby_title, (50, 50))
 
             # Отрисовка кнопок
-            button_width = int(WIDTH * 0.25)
-            button_height = int(HEIGHT * 0.1)
+            button_width = int(settings.width * 0.25)
+            button_height = int(settings.height * 0.1)
 
-            if button.draw_button("Играть", (WIDTH - button_width) // 2, HEIGHT * 0.3, button_width, button_height):
+            if button.draw_button("Играть", (settings.width - button_width) // 2, settings.height * 0.3, button_width, button_height):
                 self.lobby_music.stop()  # Остановка музыки при заходе в игру
                 game = Game(self)
                 game.run()
 
-            if button.draw_button("Настройки", (WIDTH - button_width) // 2, HEIGHT * 0.45, button_width, button_height):
+            if button.draw_button("Настройки", (settings.width - button_width) // 2, settings.height * 0.45, button_width, button_height):
                 # pygame.mouse.set_pos(0, 0)
-                self.screen.fill(BLACK)
+                self.screen.fill(settings.black)
                 properties = Properties(self.resources)
                 properties.run()
                 # pygame.mouse.set_pos(0, 0)
 
-            if button.draw_button("Выйти", (WIDTH - button_width) // 2, HEIGHT * 0.6, button_width, button_height):
+            if button.draw_button("Выйти", (settings.width - button_width) // 2, settings.height * 0.6, button_width, button_height):
                 self.lobby_music.stop()  # Остановка музыки при выходе
                 pygame.quit()
                 sys.exit()
 
             pygame.display.flip()  # Обновляем экран
-            clock.tick(FPS)  # Установка FPS
+            clock.tick(settings.fps)  # Установка FPS

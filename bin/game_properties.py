@@ -8,7 +8,7 @@ from bin.audio import Audio
 class Properties:
     def __init__(self, resources):  # Конструктор класса
         self.resources = resources
-        self.screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.RESIZABLE)
+        self.screen = pygame.display.set_mode((settings.width, settings.height), pygame.RESIZABLE)
         pygame.display.set_caption("TeXnoPark Settings")
 
         self.audio = Audio()
@@ -18,7 +18,7 @@ class Properties:
         self.num_frames = len(self.gif_frames)
 
         # Инициализация шрифта
-        self.font = pygame.font.Font('resources/main_font.ttf', WIDTH // 40)
+        self.font = pygame.font.Font('resources/main_font.ttf', settings.width // 40)
 
     def load_gif(self, filename):
         img = Image.open(filename)
@@ -26,7 +26,7 @@ class Properties:
         try:
             while True:
                 frame = pygame.image.fromstring(img.tobytes(), img.size, img.mode)
-                frame = pygame.transform.scale(frame, (WIDTH, HEIGHT))  # Масштабируем кадр под начальное разрешение
+                frame = pygame.transform.scale(frame, (settings.width, settings.height))  # Масштабируем кадр под начальное разрешение
                 frames.append(frame)
                 img.seek(len(frames))
         except EOFError:
@@ -60,30 +60,30 @@ class Properties:
                 last_frame_time = current_time  # Обновляем время последнего кадра
 
             # Отрисовка кнопок
-            button_width = int(WIDTH * 0.25)
-            button_height = int(HEIGHT * 0.1)
+            button_width = int(settings.width * 0.25)
+            button_height = int(settings.height * 0.1)
 
             # Проверяем и отрисовываем кнопки
-            if button.draw_button("Вернуться", (WIDTH - button_width) // 2, HEIGHT * 0.7,
+            if button.draw_button("Вернуться", (settings.width - button_width) // 2, settings.height * 0.7,
                                   button_width, button_height):
                 running = False
 
-            if button.draw_button("+", (WIDTH - button_width) // 2, HEIGHT * 0.45,
+            if button.draw_button("+", (settings.width - button_width) // 2, settings.height * 0.45,
                                   button_width * 0.3, button_height):
                 if settings.volume_music < 100:
                     settings.volume_music += 1
-                    self.audio.set_volume(settings.volume_music / 100)  # Ограничиваем до 1.0
+                    self.audio.set_volume(settings.volume_music / 100)  # ограничиваем до 1.0
 
-            if button.draw_button("-", (WIDTH - button_width) // 2 * 1.47, HEIGHT * 0.45,
+            if button.draw_button("-", (settings.width - button_width) // 2 * 1.47, settings.height * 0.45,
                                   button_width * 0.3, button_height):
                 if settings.volume_music > 0:
                     settings.volume_music -= 1
-                    self.audio.set_volume(settings.volume_music / 100)  # Ограничиваем до 0.0
+                    self.audio.set_volume(settings.volume_music / 100)  # ограничиваем до 0.0
 
             text = self.font.render(f'{settings.volume_music}', True, (100, 255, 100))
-            text_x = WIDTH // 2 - text.get_width() // 2
-            text_y = HEIGHT // 2 - text.get_height() // 2
+            text_x = settings.width // 2 - text.get_width() // 2
+            text_y = settings.height // 2 - text.get_height() // 2
             self.screen.blit(text, (text_x, text_y))
 
-            pygame.display.flip()  # Обновляем экран
-            clock.tick(FPS)  # Установка FPS
+            pygame.display.flip()  # обновляем экран
+            clock.tick(settings.fps)  # установка fps
