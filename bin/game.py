@@ -1,16 +1,14 @@
 import pygame
+from pygame.examples.sprite_texture import sprite
 from pygame.mixer_music import get_volume
 
 from bin.drawing import Drawing
-from bin.settings import *
+from bin.settings import settings
 from bin.player import Player
+from bin.sprite_objects import *
 from bin.ray_casting import ray_casting
 from bin.audio import Audio
-# from bin.map import x_player, y_player, world_map
 from bin.map import world_map
-
-
-# from bin.map import world_map
 
 
 class Game:
@@ -25,6 +23,7 @@ class Game:
         pygame.init()
         screen = pygame.display.set_mode((settings.width, settings.height))
         sc_map = pygame.Surface((settings.width // settings.map_scale, settings.height // settings.map_scale))
+        sprites = Sprites()
         clock = pygame.time.Clock()
         # player = Player(player_pos=(x_player, y_player))
         player = Player()
@@ -50,7 +49,8 @@ class Game:
 
 
             drawing.background(player.angle)
-            drawing.world(player.pos, player.angle)
+            walls = ray_casting(player, drawing.textures)
+            drawing.world(walls + [obj.object_locate(player, walls) for obj in sprites.list_of_objects])
             drawing.fps(clock)
             # drawing.mini_map(player)
 

@@ -47,9 +47,5 @@ class Player:
         if keys[pygame.K_d]:
             self.x += -settings.player_speed * sin_a
             self.y += settings.player_speed * cos_a
-        if keys[pygame.K_q]:
-            self.angle -= settings.rotate_speed * 2
-        if keys[pygame.K_UP]:
-            settings.player_speed += 1
-        if keys[pygame.K_DOWN] and settings.player_speed > 0:
-            settings.player_speed -= 1
+
+        self.angle %= settings.double_pi

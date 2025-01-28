@@ -31,6 +31,10 @@ class Settings:
         self.proj_coeff = 3 * self.dist * self.tile
         self.scale = self.width // self.num_rays
 
+        # настройки спрайтов
+        self.double_pi = 2 * math.pi
+        self.center_ray = self.num_rays // 2 - 1
+
         # настройки текстур (1200 x 1200)
         self.texture_width = 1200
         self.texture_height = 1200
