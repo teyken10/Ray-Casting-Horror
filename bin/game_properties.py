@@ -64,11 +64,11 @@ class Properties:
             button_height = int(settings.height * 0.1)
 
             # Проверяем и отрисовываем кнопки
-            if button.draw_button("Вернуться", (settings.width - button_width) // 2, settings.height * 0.7,
+            if button.draw_button("Вернуться", (settings.width - button_width) // 2, settings.height * 0.85,
                                   button_width, button_height):
                 running = False
 
-            if button.draw_button("+", (settings.width - button_width) // 2, settings.height * 0.45,
+            if button.draw_button("+", (settings.width - button_width) // 2, settings.height * 0.2,
                                   button_width * 0.3, button_height):
                 if settings.volume_music < 100:
                     settings.volume_music += 1

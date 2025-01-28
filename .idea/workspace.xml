@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/bin/drawing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/textures/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/textures/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/textures/door.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/textures/sky.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/textures/wall.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/game_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game_properties.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main_menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ray_casting.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ray_casting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/resource_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/resource_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ui/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ui/button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/maps/first_floor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/maps/first_floor.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +30,12 @@
     &quot;assignee&quot;: &quot;teyken10&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/teyken10/Ray-Casting-Horror.git&quot;,
-    &quot;accountId&quot;: &quot;c8258fba-5815-4756-8e5d-69136a4aefe1&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/teyken10/Ray-Casting-Horror.git",
+    "accountId": "f58c246c-b682-4ad5-b7a2-d5880ecc83ab"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -61,26 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.game.executor": "Run",
-    "Python.game_properties.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.main.py.executor": "Run",
-    "Python.main_menu.executor": "Run",
-    "Python.map.executor": "Run",
-    "Python.player.executor": "Run",
-    "Python.ray_casting.executor": "Run",
-    "Python.resource_manager.executor": "Run",
-    "Python.settings.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Shell Script.main.py.executor": "Run",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Ray-Casting-Horror/resources/textures",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.game.executor&quot;: &quot;Run&quot;,
+    &quot;Python.game_properties.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_menu.executor&quot;: &quot;Run&quot;,
+    &quot;Python.map.executor&quot;: &quot;Run&quot;,
+    &quot;Python.player.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ray_casting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.resource_manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Shell Script.main.py.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Ray-Casting-Horror/resources/textures&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Ray-Casting-Horror\resources\textures" />
@@ -99,7 +83,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -168,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737208384472</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update">
+      <option name="closed" value="true" />
+      <created>1737835349076</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737835349076</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

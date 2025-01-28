@@ -15,7 +15,6 @@ class Drawing:
                          'S': pygame.image.load('resources/textures/sky.png').convert()
                          }
 
-
     def background(self, angle):
         sky_offset = -5 * math.degrees(angle) % settings.width
         self.screen.blit(self.textures['S'], (sky_offset, 0))
@@ -24,8 +23,11 @@ class Drawing:
         pygame.draw.rect(self.screen, settings.darkgray,
                          (0, settings.half_height, settings.width, settings.half_height))
 
-    def world(self, player_pos, player_angle):
-        ray_casting(self.screen, player_pos, player_angle, self.textures)
+    def world(self, world_objects):
+        for obj in sorted(world_objects, key=lambda n: n[0], reverse=True):
+            if obj[0]:
+                _, object, object_pos = obj
+                self.screen.blit(object, object_pos)
 
     def fps(self, clock):
         display_fps = str(int(clock.get_fps()))
