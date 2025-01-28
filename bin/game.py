@@ -1,4 +1,5 @@
 import pygame
+from pygame.examples.sprite_texture import sprite
 from pygame.mixer_music import get_volume
 
 from bin.drawing import Drawing
