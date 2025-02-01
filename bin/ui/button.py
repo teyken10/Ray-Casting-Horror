@@ -4,7 +4,7 @@ from bin.audio import Audio
 
 
 class Button:
-    def __init__(self, screen):
+    def __init__(self, screen):  # Исправлено с init на __init__
         # Загрузка звука
         pygame.mixer.init()
         self.audio = Audio()
@@ -21,6 +21,9 @@ class Button:
 
         self.time_motion = settings.fps // 5
         self.time = 0
+
+    def update_sound_volume(self, volume):
+        self.hover_sound.set_volume(volume)
 
     def draw_button(self, text, x, y, width, height):
         mouse = pygame.mouse.get_pos()

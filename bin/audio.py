@@ -6,9 +6,9 @@ class Audio:
         pygame.mixer.init()
 
     def run_sound(self, filename, volume):
-        sound = pygame.mixer.Sound(filename)
-        sound.set_volume(volume)
-        return sound
+        self.sound = pygame.mixer.Sound(filename)
+        self.sound.set_volume(volume)
+        return self.sound
 
     def run_music(self, filename, volume):
         pygame.mixer.music.load(filename)
@@ -16,8 +16,9 @@ class Audio:
         pygame.mixer.music.play(-1)
         return pygame.mixer.music
 
-    def set_volume(self, volume):
+    def set_music_volume(self, volume):
         return pygame.mixer.music.set_volume(volume)
 
-    def get_volume(self):
-        return pygame.mixer.music.get_volume()
+    def set_sound_volume(self, filename, volume):
+        self.sound = pygame.mixer.Sound(filename)
+        self.sound.set_volume(volume)

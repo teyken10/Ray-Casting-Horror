@@ -13,7 +13,6 @@ from bin.map import world_map
 class Game:
     def __init__(self, main_menu):
         self.audio = Audio()
-        # self.lobby_music = self.audio.run_music("resources/lobby_music.mp3", settings.volume_music / 100)
         self.main_menu = main_menu
 
     def run(self):
@@ -21,12 +20,10 @@ class Game:
         pygame.event.set_grab(True)
         pygame.init()
         screen = pygame.display.set_mode((settings.width, settings.height))
-        sc_map = pygame.Surface((settings.width // settings.map_scale, settings.height // settings.map_scale))
         sprites = Sprites()
         clock = pygame.time.Clock()
-        # player = Player(player_pos=(x_player, y_player))
         player = Player()
-        drawing = Drawing(screen, sc_map)
+        drawing = Drawing(screen)
 
         running = True
         while running:
@@ -37,12 +34,6 @@ class Game:
                     if event.key == pygame.K_ESCAPE:
                         running = False  # Выход из игры
 
-                if event.type == pygame.MOUSEMOTION:
-                    player.mouse_motion(event.pos)
-
-                else:
-                    player.last_mouse_pos_x = (settings.width // 2, settings.height // 2)
-
             player.movement()
             screen.fill(settings.black)
 
@@ -51,7 +42,6 @@ class Game:
             walls = ray_casting(player, drawing.textures)
             drawing.world(walls + [obj.object_locate(player, walls) for obj in sprites.list_of_objects])
             drawing.fps(clock)
-            # drawing.mini_map(player)
 
             # pygame.draw.circle(screen, settings.green, (int(player.x) // 7, int(player.y) // 7), 12)
             # pygame.draw.line(screen, settings.green, player.pos, (player.x // 7 + settings.width * math.cos(player.angle),

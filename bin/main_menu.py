@@ -31,8 +31,6 @@ class MainMenu:
 
         self.last_hovered_button = None  # Для хранения последней кнопки, на которую наведен курсор
 
-        # Проигрываем фоновую музыку
-        print(pygame.RESIZABLE)
 
     def run(self):
         # Основной цикл

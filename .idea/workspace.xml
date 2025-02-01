@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/bin/sprite_objects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2025_0_42_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2025_0_42__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/audio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/drawing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game_properties.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main_menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/ray_casting.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ray_casting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sprite_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sprite_objects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ui/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ui/button.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/maps/first_floor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/maps/first_floor.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +80,7 @@
     &quot;Python.ray_casting.executor&quot;: &quot;Run&quot;,
     &quot;Python.resource_manager.executor&quot;: &quot;Run&quot;,
     &quot;Python.settings.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tests.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Shell Script.main.py.executor&quot;: &quot;Run&quot;,
@@ -78,11 +97,11 @@
       <recent name="D:\Ray-Casting-Horror" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ray-Casting-Horror\resources\sprites\devil" />
       <recent name="D:\Ray-Casting-Horror\resources\textures" />
       <recent name="D:\Ray-Casting-Horror\resources" />
       <recent name="D:\Ray-Casting-Horror\bin" />
       <recent name="D:\Ray-Casting-Horror" />
-      <recent name="C:\Users\plato\OneDrive\Документы\GitHub\WorldOfTanksDemake\data" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -165,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737835349076</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <option name="closed" value="true" />
+      <created>1738071137865</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738071137865</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

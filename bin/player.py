@@ -8,30 +8,17 @@ class Player:
     def __init__(self):
         self.x, self.y = settings.player_pos
         self.angle = settings.player_angle
-        self.last_mouse_pos_x = None
 
     @property
     def pos(self):
         return (self.x, self.y)
 
-    def mouse_motion(self, pos_x):
-        if self.last_mouse_pos_x:
-            if self.last_mouse_pos_x > pos_x:
-                self.angle -= settings.rotate_speed
-                self.last_mouse_pos_x = pos_x
-
-            elif self.last_mouse_pos_x < pos_x:
-                self.angle += settings.rotate_speed
-                self.last_mouse_pos_x = pos_x
-
-        else:
-            self.last_mouse_pos_x = pos_x
-
-        if pos_x[0] < settings.width // 80 or pos_x[0] > settings.width - settings.width // 80:
-            pygame.mouse.set_pos(settings.half_width, settings.half_height)
-        # print(self.last_mouse_pos_x)
-
     def movement(self):
+        self.keys_control()
+        self.mouse_control()
+        self.angle %= settings.double_pi
+
+    def keys_control(self):
         sin_a = math.sin(self.angle)
         cos_a = math.cos(self.angle)
         keys = pygame.key.get_pressed()
@@ -48,4 +35,8 @@ class Player:
             self.x += -settings.player_speed * sin_a
             self.y += settings.player_speed * cos_a
 
-        self.angle %= settings.double_pi
+    def mouse_control(self):
+        if pygame.mouse.get_focused():
+            difference = pygame.mouse.get_pos()[0] - settings.half_width
+            pygame.mouse.set_pos((settings.half_width, settings.half_height))
+            self.angle += difference * settings.sensitivity
