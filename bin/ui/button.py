@@ -8,13 +8,13 @@ class Button:
         # Загрузка звука
         pygame.mixer.init()
         self.audio = Audio()
-        self.hover_sound = self.audio.run_sound("resources/on_button.mp3", settings.volume_sound)
+        self.hover_sound = self.audio.run_sound("resources/sounds/on_button.mp3", settings.volume_sound)
 
         # Загружаем изображение фона кнопки
-        self.button_bg = pygame.image.load("resources/blood_button.png").convert_alpha()
+        self.button_bg = pygame.image.load("resources/pics/blood_button.png").convert_alpha()
 
         # Инициализация шрифта
-        self.font = pygame.font.Font('resources/main_font.ttf', settings.width // 40)
+        self.font = pygame.font.Font('resources/fonts/main_font.ttf', settings.width // 40)
 
         self.screen = screen
         self.last_hovered_button = None  # Для хранения последней кнопки, на которую наведен курсор

@@ -19,15 +19,15 @@ class MainMenu:
         self.num_frames = len(self.gif_frames)
 
         # Загружаем изображение заголовка игры в лобби
-        self.lobby_title = pygame.image.load("resources/texnopark_title.png").convert_alpha()
+        self.lobby_title = pygame.image.load("resources/pics/texnopark_title.png").convert_alpha()
 
         # Инициализация шрифта
-        self.font = pygame.font.Font('resources/main_font.ttf', settings.width // 40)
+        self.font = pygame.font.Font('resources/fonts/main_font.ttf', settings.width // 40)
 
         # Загрузка звука
         self.audio = Audio()
-        self.hover_sound = self.audio.run_sound("resources/on_button.mp3", settings.volume_sound / 100)
-        self.lobby_music = self.audio.run_music("resources/lobby_music.mp3", settings.volume_music / 100)
+        self.hover_sound = self.audio.run_sound("resources/sounds/on_button.mp3", settings.volume_sound / 100)
+        self.lobby_music = self.audio.run_music("resources/music/lobby_music.mp3", settings.volume_music / 100)
 
         self.last_hovered_button = None  # Для хранения последней кнопки, на которую наведен курсор
 

@@ -8,7 +8,7 @@ from bin.map import mini_map
 class Drawing:
     def __init__(self, screen):
         self.screen = screen
-        self.font = pygame.font.Font('resources/main_font.ttf', settings.width // 40)
+        self.font = pygame.font.Font('resources/fonts/main_font.ttf', settings.width // 40)
         self.textures = {'1': pygame.image.load('resources/textures/wall.png').convert(),
                          '2': pygame.image.load('resources/textures/door.png').convert(),
                          '3': pygame.image.load('resources/textures/up-stairs.png').convert(),

@@ -5,32 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/bin/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WorldOfTanksDemake.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2025_0_42_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_01_2025_0_42__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/music/Incantation-chosic.com_.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/devil/base/0.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/audio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/drawing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game_properties.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game_properties.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main_menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ray_casting.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ray_casting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/resource_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/resource_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/sprite_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sprite_objects.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/ui/button.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ui/button.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/maps/first_floor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/maps/first_floor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/OutrightHorrorBold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/blood_button.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/pics/blood_button.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/code_pro_bold.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lobby_music.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/resources/music/lobby_music.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/main.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resources/pics/main.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/main_font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/resources/fonts/main_font.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/on_button.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sounds/on_button.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/open_door.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sounds/open_door.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/devil/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/devil/anim/0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/devil/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/devil/base/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/devil/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/devil/base/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/devil/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/devil/base/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/devil/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/devil/base/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/devil/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/devil/base/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/devil/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/devil/base/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/devil/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/devil/base/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/table.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/table/base/0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/texnopark_title.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/pics/texnopark_title.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +109,11 @@
       <recent name="D:\Ray-Casting-Horror" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Ray-Casting-Horror\resources\sprites\table\base" />
+      <recent name="D:\Ray-Casting-Horror\resources\sprites\devil\anim" />
+      <recent name="D:\Ray-Casting-Horror\resources\sprites\devil\base" />
       <recent name="D:\Ray-Casting-Horror\resources\sprites\devil" />
-      <recent name="D:\Ray-Casting-Horror\resources\textures" />
-      <recent name="D:\Ray-Casting-Horror\resources" />
-      <recent name="D:\Ray-Casting-Horror\bin" />
-      <recent name="D:\Ray-Casting-Horror" />
+      <recent name="D:\Ray-Casting-Horror\resources\fonts" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -192,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738071137865</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <option name="closed" value="true" />
+      <created>1738407427735</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738407427735</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

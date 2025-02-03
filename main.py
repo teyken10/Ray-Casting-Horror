@@ -1,5 +1,4 @@
 import pygame
-
 from bin.main_menu import MainMenu
 from bin.resource_manager import ResourceManager
 

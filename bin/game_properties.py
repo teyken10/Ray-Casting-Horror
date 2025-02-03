@@ -18,7 +18,7 @@ class Properties:
         self.num_frames = len(self.gif_frames)
 
         # Инициализация шрифта
-        self.font = pygame.font.Font('resources/main_font.ttf', settings.width // 40)
+        self.font = pygame.font.Font('resources/fonts/main_font.ttf', settings.width // 40)
 
     def load_gif(self, filename):
         img = Image.open(filename)
@@ -64,84 +64,78 @@ class Properties:
             button_width = int(settings.width * 0.25)
             button_height = int(settings.height * 0.1)
 
-            music_volume_text = self.font.render("Громкость музыки", True, settings.sandy)
-            self.screen.blit(music_volume_text, (10, 10))
+            headline_text = self.font.render('НАСТРОЙКИ', True, settings.pink)
+            self.screen.blit(headline_text, (settings.width // 2 - 100, 100))
 
-            if button.draw_button("+", 10, 50, button_width * 0.3, button_height):
+            music_volume_text = self.font.render("Громкость музыки", True, settings.sandy)
+            self.screen.blit(music_volume_text, (10, 250))
+
+            if button.draw_button("+", 10, 300, button_width * 0.3, button_height):
                 if settings.volume_music < 100:
                     settings.volume_music += 1
                     self.audio.set_music_volume(settings.volume_music / 100)
 
-            if button.draw_button("-", 10 + button_width * 0.3 + 10, 50, button_width * 0.3, button_height):
+            if button.draw_button("-", 10 + button_width * 0.3 + 10, 300, button_width * 0.3, button_height):
                 if settings.volume_music > 0:
                     settings.volume_music -= 1
                     self.audio.set_music_volume(settings.volume_music / 100)
 
             music_volume_display = self.font.render(f'{settings.volume_music}', True, settings.pink)
-            self.screen.blit(music_volume_display, (10 + button_width * 0.6 + 15, 60))
+            self.screen.blit(music_volume_display, (10 + button_width * 0.6 + 15, 310))
 
             # Отрисовка кнопок для громкости звуков
             sound_volume_text = self.font.render("Громкость звуков", True, settings.sandy)
-            self.screen.blit(sound_volume_text, (10, 200))
+            self.screen.blit(sound_volume_text, (10, 450))
 
-            if button.draw_button("+", 10, 240, button_width * 0.3, button_height):
+            if button.draw_button("+", 10, 500, button_width * 0.3, button_height):
                 if settings.volume_sound < 100:
                     settings.volume_sound += 1
                     # Обновляем громкость звука
                     button.update_sound_volume(settings.volume_sound / 100)
 
-            if button.draw_button("-", 10 + button_width * 0.3 + 10, 240, button_width * 0.3, button_height):
+            if button.draw_button("-", 10 + button_width * 0.3 + 10, 500, button_width * 0.3, button_height):
                 if settings.volume_sound > 0:
                     settings.volume_sound -= 1
                     # Обновляем громкость звука
                     button.update_sound_volume(settings.volume_sound / 100)
 
             sound_volume_display = self.font.render(f'{settings.volume_sound}', True, settings.pink)
-            self.screen.blit(sound_volume_display, (10 + button_width * 0.6 + 15, 250))
+            self.screen.blit(sound_volume_display, (10 + button_width * 0.6 + 15, 510))
 
             # Отрисовка настройки чувствительности
             sensitivity_text = self.font.render("Чувствительность", True, settings.sandy)
-            self.screen.blit(sensitivity_text, (settings.width - settings.height // 2.28, 10))
+            self.screen.blit(sensitivity_text, (settings.width - settings.height // 2.28, 250))
 
-            if button.draw_button("+", settings.width - settings.height // 2.28, 50, button_width * 0.3, button_height):
+            if button.draw_button("+", settings.width - settings.height // 2.28, 300, button_width * 0.3, button_height):
                 if settings.sensitivity < 100:
                     settings.sensitivity += 0.0001  # Увеличиваем чувствительность
 
-            if button.draw_button("-", settings.width - settings.height // 2.28 + button_width * 0.3 + 10, 50, button_width * 0.3,
+            if button.draw_button("-", settings.width - settings.height // 2.28 + button_width * 0.3 + 10, 300,
+                                  button_width * 0.3,
                                   button_height):
                 if settings.sensitivity > 0.0001:
                     settings.sensitivity -= 0.0001  # Уменьшаем чувствительность
 
             sensitivity_display = self.font.render(f'{settings.sensitivity}', True, settings.pink)
-            self.screen.blit(sensitivity_display, (settings.width - settings.height // 2.28 + button_width * 0.6 + 15, 60))
+            self.screen.blit(sensitivity_display,
+                             (settings.width - settings.height // 2.28 + button_width * 0.6 + 15, 310))
 
             # Настройки размера экрана
-            screen_size_text = self.font.render("Размер экрана", True, settings.sandy)
-            self.screen.blit(screen_size_text, (settings.width // 2 - 130, 10))
+            screen_size_text = self.font.render("Количество FPS", True, settings.sandy)
+            self.screen.blit(screen_size_text, (settings.width // 2 - 130, 250))
 
-            screen_sizes = ["2560x1440", "1920x1080", "1200x800"]  # Предложенные варианты
-            for i, size in enumerate(screen_sizes):
-                if button.draw_button(size, settings.width // 2 - settings.width // 8.5, 40 + i * 80, button_width, button_height):
-                    if size == "2560x1440":
-                        settings.width, settings.height = 2560, 1440
-                    if size == "1920x1080":
-                        settings.width, settings.height = 1920, 1080
-                    if size == "1200x800":
-                        settings.width, settings.height = 1200, 800
-                    running = False
-
-            # Настройка переключения между мониторами
-            monitor_text = self.font.render("Выбрать монитор", True, settings.sandy)
-            self.screen.blit(monitor_text, (settings.width // 2 - 145, 350))
-
-            monitors = ["Монитор 1", "Монитор 2"]
-            for i, monitor in enumerate(monitors):
-                if button.draw_button(monitor, settings.width // 2 - settings.width // 8.5, 450 + i * 80, button_width, button_height):
-                    if monitor == "Монитор 1":
-                        print("Монитор 1")
-                    if monitor == "Монитор 2":
-                        print("Монитор 2")
-
+            screen_sizes = ["30", "60", "120", '165']  # Предложенные варианты
+            for i, fps in enumerate(screen_sizes):
+                if button.draw_button(fps, settings.width // 2 - settings.width // 8.5 + 80,
+                                      300 + i * 60, button_width // 2, button_height // 1.5):
+                    if fps == "30":
+                        settings.fps = 30
+                    if fps == "60":
+                        settings.fps = 60
+                    if fps == "120":
+                        settings.fps = 120
+                    if fps == "165":
+                        settings.fps = 165
 
             # Кнопка "Вернуться"
             if button.draw_button("Вернуться", (settings.width - button_width) // 2, settings.height * 0.85,

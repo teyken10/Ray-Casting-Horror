@@ -1,37 +1,50 @@
 import math
-
 import pygame
 from bin.settings import settings
+from collections import deque
 
 tile = settings.tile
 
 
 class Sprites:
     def __init__(self):
+        self.sprite_parameters = {
+            'sprite_devil': {
+                'sprite': pygame.image.load('resources/sprites/devil/base/0.png').convert_alpha(),
+                'viewing_angles': None,
+                'shift': -0.2,
+                'scale': 2,
+                'animation': deque(
+                    [pygame.image.load(f'resources/sprites/devil/anim/{i}.png').convert_alpha() for i in range(9)]),
+                'animation_dist': 800,
+                'animation_speed': 15,
+            },
+        }
         self.sprite_types = {
-            'table': pygame.image.load('resources/sprites/table.png').convert_alpha(),
-            'devil': [pygame.image.load(f'resources/sprites/devil/{i}.png').convert_alpha() for i in range(8)]
+            'table': pygame.image.load('resources/sprites/table/base/0.png').convert_alpha(),
+            'devil': [pygame.image.load(f'resources/sprites/devil/base/{i}.png').convert_alpha() for i in range(8)]
         }
         self.list_of_objects = [
-            SpriteObject(self.sprite_types['table'], True, (15.9, 5.1), 2, 0.4),
-            SpriteObject(self.sprite_types['table'], True, (15.9, 4.1), 2, 0.4),
-            SpriteObject(self.sprite_types['devil'], False, (10, 6), -0.2, 2)
+            SpriteObject(self.sprite_parameters['sprite_devil'], (10, 6))
         ]
 
 
 class SpriteObject:
-    def __init__(self, object, static, pos, shift, scale):
-        self.object = object
-        self.static = static
+    def __init__(self, parameters, pos):
+        self.object = parameters['sprite']
+        self.viewing_angles = parameters['viewing_angles']
+        self.shift = parameters['shift']
+        self.scale = parameters['scale']
+        self.animation = parameters['animation']
+        self.animation_dist = parameters['animation_dist']
+        self.animation_speed = parameters['animation_speed']
+        self.animation_count = 0
         self.pos = self.x, self.y = pos[0] * tile, pos[1] * tile
-        self.shift = shift
-        self.scale = scale
-
-        if not static:
+        if self.viewing_angles:
             self.sprite_angles = [frozenset(range(i, i + 45)) for i in range(0, 360, 45)]
             self.sprite_positions = {angle: pos for angle, pos in zip(self.sprite_angles, self.object)}
 
-    def object_locate(self, player, walls):
+    def object_locate(self, player):
         dx, dy = self.x - player.x, self.y - player.y
         distance_to_sprite = math.sqrt(dx ** 2 + dy ** 2)
 
@@ -49,8 +62,8 @@ class SpriteObject:
             proj_height = min(int(settings.proj_coeff / distance_to_sprite * self.scale), settings.double_height)
             half_proj_height = proj_height // 2
             shift = half_proj_height * self.shift
-
-            if not self.static:
+            # выбор спрайта для угла
+            if self.viewing_angles:
                 if theta < 0:
                     theta += settings.double_pi
                 theta = 360 - int(math.degrees(theta))
@@ -60,9 +73,20 @@ class SpriteObject:
                         self.object = self.sprite_positions[angles]
                         break
 
+            # анимация спрайта
+            sprite_object = self.object
+            if self.animation and distance_to_sprite < self.animation_dist:
+                sprite_object = self.animation[0]
+                if self.animation_count < self.animation_speed:
+                    self.animation_count += 1
+                else:
+                    self.animation.rotate()
+                    self.animation_count = 0
+
+            # размер и позиция спрайта
             sprite_pos = (
             current_ray * settings.scale - half_proj_height, settings.half_height - half_proj_height + shift)
-            sprite = pygame.transform.scale(self.object, (proj_height, proj_height))
+            sprite = pygame.transform.scale(sprite_object, (proj_height, proj_height))
             return (distance_to_sprite, sprite, sprite_pos)
         else:
             return (False,)

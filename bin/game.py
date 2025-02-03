@@ -1,13 +1,10 @@
 import pygame
-from pygame.mixer_music import get_volume
-
 from bin.drawing import Drawing
 from bin.settings import settings
 from bin.player import Player
 from bin.sprite_objects import *
 from bin.ray_casting import ray_casting
 from bin.audio import Audio
-from bin.map import world_map
 
 
 class Game:
@@ -18,7 +15,7 @@ class Game:
     def run(self):
         pygame.mouse.set_visible(False)
         pygame.event.set_grab(True)
-        pygame.init()
+        pygame.init() 
         screen = pygame.display.set_mode((settings.width, settings.height))
         sprites = Sprites()
         clock = pygame.time.Clock()
@@ -40,7 +37,7 @@ class Game:
 
             drawing.background(player.angle)
             walls = ray_casting(player, drawing.textures)
-            drawing.world(walls + [obj.object_locate(player, walls) for obj in sprites.list_of_objects])
+            drawing.world(walls + [obj.object_locate(player) for obj in sprites.list_of_objects])
             drawing.fps(clock)
 
             # pygame.draw.circle(screen, settings.green, (int(player.x) // 7, int(player.y) // 7), 12)

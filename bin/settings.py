@@ -3,16 +3,17 @@ import math
 
 class Settings:
     def __init__(self):
-        # размеры игры
+        # настройки игры
         self.width = 1200
         self.height = 800
         self.half_width = self.width // 2
         self.half_height = self.height // 2
         self.penta_height = 5 * self.height
         self.double_height = 2 * self.height
-        self.fps = 165
+        self.fps = 60
         self.fps_pos = (self.width - self.width // 22, self.height // 160)
         self.tile = 100
+        self.reboot = True
 
         # громкость музыки и звуков
         self.volume_music = 50
