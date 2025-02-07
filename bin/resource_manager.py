@@ -5,7 +5,8 @@ from bin.settings import *
 
 class ResourceManager:
     def __init__(self):
-        self.main_menu_frames = self.load_gif('resources/pics/main.gif')
+        self.main_menu_frames = self.load_gif('resources/pics/1.gif')
+        self.game_properties_frames = self.load_gif('resources/pics/2.gif')
 
     # Загрузка анимации из GIF
     def load_gif(self, filename):

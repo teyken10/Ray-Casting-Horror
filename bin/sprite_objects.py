@@ -13,19 +13,32 @@ class Sprites:
                 'sprite': pygame.image.load('resources/sprites/devil/base/0.png').convert_alpha(),
                 'viewing_angles': None,
                 'shift': -0.2,
-                'scale': 2,
+                'scale': 1,
                 'animation': deque(
                     [pygame.image.load(f'resources/sprites/devil/anim/{i}.png').convert_alpha() for i in range(9)]),
                 'animation_dist': 800,
                 'animation_speed': 15,
+                # 'blocked': True
             },
+
+            'table': {
+                'sprite': pygame.image.load('resources/sprites/table/base/0.png').convert_alpha(),
+                'viewing_angles': None,
+                'shift': -0.2,
+                'scale': 1,
+                'animation': deque(
+                    [pygame.image.load(f'resources/sprites/table/base/0.png').convert_alpha()]),
+                'animation_dist': 800,
+                'animation_speed': 15,
+                # 'blocked': True
+            }
         }
         self.sprite_types = {
             'table': pygame.image.load('resources/sprites/table/base/0.png').convert_alpha(),
             'devil': [pygame.image.load(f'resources/sprites/devil/base/{i}.png').convert_alpha() for i in range(8)]
         }
         self.list_of_objects = [
-            SpriteObject(self.sprite_parameters['sprite_devil'], (10, 6))
+            SpriteObject(self.sprite_parameters['sprite_devil'], (5, 15))
         ]
 
 
@@ -85,7 +98,7 @@ class SpriteObject:
 
             # размер и позиция спрайта
             sprite_pos = (
-            current_ray * settings.scale - half_proj_height, settings.half_height - half_proj_height + shift)
+                current_ray * settings.scale - half_proj_height, settings.half_height - half_proj_height + shift)
             sprite = pygame.transform.scale(sprite_object, (proj_height, proj_height))
             return (distance_to_sprite, sprite, sprite_pos)
         else:

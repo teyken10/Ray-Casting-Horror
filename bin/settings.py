@@ -10,14 +10,15 @@ class Settings:
         self.half_height = self.height // 2
         self.penta_height = 5 * self.height
         self.double_height = 2 * self.height
-        self.fps = 60
+        self.fps = 165
         self.fps_pos = (self.width - self.width // 22, self.height // 160)
         self.tile = 100
         self.reboot = True
+        self.prehistory = False
 
         # громкость музыки и звуков
-        self.volume_music = 50
-        self.volume_sound = 50
+        self.volume_music = 0.5
+        self.volume_sound = 0.5
 
         # настройки ray casting
         self.fov = math.pi / 3
@@ -41,15 +42,16 @@ class Settings:
         self.texture_scale = self.texture_width // self.tile
 
         # настройки игрока
-        self.player_pos = self.width // 2, self.height // 2
+        self.player_pos = self.half_width, self.half_height
         self.player_angle = 0
-        self.player_speed = 2
+        self.player_speed = 165 / self.fps
         self.sensitivity = 0.003
 
         # цвета
         self.white = (255, 255, 255)
         self.black = (0, 0, 0)
         self.red = (220, 0, 0)
+        self.darkred = (40, 0, 0)
         self.green = (0, 220, 0)
         self.blue = (0, 0, 255)
         self.darkgray = (40, 40, 40)
@@ -57,8 +59,8 @@ class Settings:
         self.dark_yellow = (200, 200, 0)
         self.yellow = (255, 255, 0)
         self.skyblue = (0, 186, 255)
-        self.sandy = (244, 164, 96)
-        self.pink = (240, 5, 121)
+        self.sandy = (234, 118, 1)
+        self.pink = (230, 1, 107)
 
 
 settings = Settings()

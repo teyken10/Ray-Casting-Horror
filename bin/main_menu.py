@@ -1,8 +1,9 @@
 import pygame
 import sys
 from bin.settings import settings
-from bin.game import Game
+from bin.prehistory import Prehistory
 from bin.game_properties import Properties
+from bin.game import Game
 from bin.audio import Audio
 from bin.ui.button import Button
 
@@ -18,16 +19,13 @@ class MainMenu:
         self.gif_frames = self.resources.main_menu_frames
         self.num_frames = len(self.gif_frames)
 
-        # Загружаем изображение заголовка игры в лобби
-        self.lobby_title = pygame.image.load("resources/pics/texnopark_title.png").convert_alpha()
-
         # Инициализация шрифта
         self.font = pygame.font.Font('resources/fonts/main_font.ttf', settings.width // 40)
 
         # Загрузка звука
         self.audio = Audio()
-        self.hover_sound = self.audio.run_sound("resources/sounds/on_button.mp3", settings.volume_sound / 100)
-        self.lobby_music = self.audio.run_music("resources/music/lobby_music.mp3", settings.volume_music / 100)
+        self.hover_sound = self.audio.run_sound("resources/sounds/on_button.mp3", settings.volume_sound)
+        self.lobby_music = self.audio.run_music("resources/music/lobby_music.mp3", settings.volume_music)
 
         self.last_hovered_button = None  # Для хранения последней кнопки, на которую наведен курсор
 
@@ -60,17 +58,18 @@ class MainMenu:
                 current_frame = (current_frame + 1) % self.num_frames  # Переход к следующему кадру
                 last_frame_time = current_time  # Обновляем время последнего кадра
 
-            scaled_lobby_title = pygame.transform.scale(self.lobby_title, (settings.width // 3, settings.height // 5))
-            self.screen.blit(scaled_lobby_title, (50, 50))
-
             # Отрисовка кнопок
             button_width = int(settings.width * 0.25)
             button_height = int(settings.height * 0.1)
 
             if button.draw_button("Играть", (settings.width - button_width) // 2, settings.height * 0.3, button_width, button_height):
                 self.lobby_music.stop()  # Остановка музыки при заходе в игру
-                game = Game(self)
-                game.run()
+                if settings.prehistory:
+                    game = Game(self)
+                    game.run()
+                else:
+                    preh = Prehistory(self)
+                    preh.run()
 
             if button.draw_button("Настройки", (settings.width - button_width) // 2, settings.height * 0.45, button_width, button_height):
                 # pygame.mouse.set_pos(0, 0)

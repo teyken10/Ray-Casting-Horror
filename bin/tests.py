@@ -1,7 +1,19 @@
-with open('../resources/maps/first_floor.txt', 'r', encoding='utf-8') as f:
-    first_floor = [row.rstrip() for row in f.readlines()]
+import pygame
 
-for j, row in enumerate(first_floor):
-    for i, char in enumerate(row):
-        print(char == '1', end=', ')
-    print()
+pygame.init()
+screen = pygame.display.set_mode((800, 800))
+clock = pygame.time.Clock()
+
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            exit()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_ESCAPE:
+                running = False  # Выход из игры
+        print(event)
+
+    screen.fill((0, 0, 0))
+    pygame.draw.rect(screen, (255, 255, 255),
+                     (20, 20, 100, 75))

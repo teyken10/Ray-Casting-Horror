@@ -32,10 +32,10 @@ class Button:
             self.time = 0
             self.time_motion = settings.fps // 3
 
+        scaled_bg = pygame.transform.scale(self.button_bg, (width, height))
         # Проверяем, наведён ли курсор на кнопку
         if x <= mouse[0] <= x + width and y <= mouse[1] <= y + height:
             # Если курсор на кнопке, отображаем растянутое изображение
-            scaled_bg = pygame.transform.scale(self.button_bg, (width, height))
             self.screen.blit(scaled_bg, (x, y))
             # Проигрываем звук при наведении
             if self.last_hovered_button != text:
@@ -44,7 +44,7 @@ class Button:
 
             if click:
                 if self.time == 0:
-                    self.time += 1
+                    self.time += 6
                     return True
                 elif self.time_motion <= self.time:
                     self.time_motion = settings.fps // 12

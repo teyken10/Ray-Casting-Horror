@@ -1,23 +1,26 @@
 from bin.settings import settings
+import pygame
+
+tile = settings.tile
 
 with open('resources/maps/first_floor.txt', 'r', encoding='utf-8') as f:
     first_floor = [row.rstrip() for row in f.readlines()]
-# print(first_floor)
-#
+
 # with open('resources/maps/second_floor.txt', 'r', encoding='utf-8') as f:
 #     second_floor = [row.rstrip() for row in f.readlines()]
 
-WORLD_WIDTH = len(first_floor[0]) * settings.tile
-WORLD_HEIGHT = len(first_floor) * settings.tile
+WORLD_WIDTH = len(first_floor[0]) * tile
+WORLD_HEIGHT = len(first_floor) * tile
 world_map = {}
-mini_map = set()
+collision_walls = []
 _ = False
 for j, row in enumerate(first_floor):
     for i, char in enumerate(row):
         if char:
+            collision_walls.append(pygame.Rect(i * tile, j * tile, tile, tile))
             if char == '1':
-                world_map[(i * settings.tile, j * settings.tile)] = '1'
+                world_map[(i * tile, j * tile)] = '1'
             elif char == '2':
-                world_map[(i * settings.tile, j * settings.tile)] = '2'
+                world_map[(i * tile, j * tile)] = '2'
             elif char == '3':
-                world_map[(i * settings.tile, j * settings.tile)] = '3'
+                world_map[(i * tile, j * tile)] = '3'
