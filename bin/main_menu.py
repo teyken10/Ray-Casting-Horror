@@ -29,6 +29,10 @@ class MainMenu:
 
         self.last_hovered_button = None  # Для хранения последней кнопки, на которую наведен курсор
 
+    def draw_rect_alpha(self, screen, color, rect):
+        shape_surf = pygame.Surface(pygame.Rect(rect).size, pygame.SRCALPHA)
+        pygame.draw.rect(shape_surf, color, shape_surf.get_rect())
+        screen.blit(shape_surf, rect)
 
     def run(self):
         # Основной цикл
@@ -58,11 +62,14 @@ class MainMenu:
                 current_frame = (current_frame + 1) % self.num_frames  # Переход к следующему кадру
                 last_frame_time = current_time  # Обновляем время последнего кадра
 
+            self.draw_rect_alpha(self.screen, (0, 0, 0, 150), (0, 0, settings.width, settings.height))
+
             # Отрисовка кнопок
             button_width = int(settings.width * 0.25)
             button_height = int(settings.height * 0.1)
 
-            if button.draw_button("Играть", (settings.width - button_width) // 2, settings.height * 0.3, button_width, button_height):
+            if button.draw_button("Играть", (settings.width - button_width) // 2, settings.height * 0.3, button_width,
+                                  button_height):
                 self.lobby_music.stop()  # Остановка музыки при заходе в игру
                 if settings.prehistory:
                     game = Game(self)
@@ -71,14 +78,16 @@ class MainMenu:
                     preh = Prehistory(self)
                     preh.run()
 
-            if button.draw_button("Настройки", (settings.width - button_width) // 2, settings.height * 0.45, button_width, button_height):
+            if button.draw_button("Настройки", (settings.width - button_width) // 2, settings.height * 0.45,
+                                  button_width, button_height):
                 # pygame.mouse.set_pos(0, 0)
                 self.screen.fill(settings.black)
                 properties = Properties(self.resources)
                 properties.run()
                 # pygame.mouse.set_pos(0, 0)
 
-            if button.draw_button("Выйти", (settings.width - button_width) // 2, settings.height * 0.6, button_width, button_height):
+            if button.draw_button("Выйти", (settings.width - button_width) // 2, settings.height * 0.6, button_width,
+                                  button_height):
                 self.lobby_music.stop()  # Остановка музыки при выходе
                 pygame.quit()
                 sys.exit()

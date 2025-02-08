@@ -19,18 +19,31 @@ class Player:
     def detect_collision(self, dx, dy):
         if dx != 0:
             delta_x = (self.side // 2) * abs(dx) / dx
-            if mapping(self.x + dx + delta_x, self.y + delta_x) in world_map:
-                dx = 0
-            if mapping(self.x + dx + delta_x, self.y - delta_x) in world_map:
-                dx = 0
+            fx1, fx2 = mapping(self.x + dx + delta_x, self.y + delta_x)
+            sx1, sx2 = mapping(self.x + dx + delta_x, self.y - delta_x)
+            if (fx1, fx2) in world_map:
+                if world_map[(fx1, fx2)] == '1':
+                    dx = 0
+            if (sx1, sx2) in world_map:
+                if world_map[(sx1, sx2)] == '1':
+                    dx = 0
         if dy != 0:
             delta_y = (self.side // 2) * abs(dy) / dy
-            if mapping(self.x + delta_y, self.y + dy + delta_y) in world_map:
-                dy = 0
-            if mapping(self.x - delta_y, self.y + dy + delta_y) in world_map:
-                dy = 0
+            fy1, fy2 = mapping(self.x + delta_y, self.y + dy + delta_y)
+            sy1, sy2 = mapping(self.x - delta_y, self.y + dy + delta_y)
+            if (fy1, fy2) in world_map:
+                if world_map[(fy1, fy2)] == '1':
+                    dy = 0
+            if (sy1, sy2) in world_map:
+                if world_map[(sy1, sy2)] == '1':
+                    dy = 0
         self.x += dx
         self.y += dy
+
+    def get_key(self, d, value):
+        for k, v in d.items():
+            if v == value:
+                return k
 
     def movement(self):
         self.keys_control()

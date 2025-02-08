@@ -44,7 +44,7 @@ class Settings:
         # настройки игрока
         self.player_pos = self.half_width, self.half_height
         self.player_angle = 0
-        self.player_speed = 165 / self.fps
+        self.player_speed = 165 / self.fps + 0.5
         self.sensitivity = 0.003
 
         # цвета

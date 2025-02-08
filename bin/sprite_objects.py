@@ -21,10 +21,10 @@ class Sprites:
                 # 'blocked': True
             },
 
-            'table': {
+            'sprite_table': {
                 'sprite': pygame.image.load('resources/sprites/table/base/0.png').convert_alpha(),
                 'viewing_angles': None,
-                'shift': -0.2,
+                'shift': 2.5,
                 'scale': 1,
                 'animation': deque(
                     [pygame.image.load(f'resources/sprites/table/base/0.png').convert_alpha()]),
@@ -38,7 +38,13 @@ class Sprites:
             'devil': [pygame.image.load(f'resources/sprites/devil/base/{i}.png').convert_alpha() for i in range(8)]
         }
         self.list_of_objects = [
-            SpriteObject(self.sprite_parameters['sprite_devil'], (5, 15))
+            SpriteObject(self.sprite_parameters['sprite_devil'], (5, 15)),
+            # SpriteObject(self.sprite_parameters['sprite_table'], (20, 3)),
+            # SpriteObject(self.sprite_parameters['sprite_table'], (20, 4.5)),
+            # SpriteObject(self.sprite_parameters['sprite_table'], (20, 6)),
+            # SpriteObject(self.sprite_parameters['sprite_table'], (18, 3)),
+            # SpriteObject(self.sprite_parameters['sprite_table'], (18, 4.5)),
+            # SpriteObject(self.sprite_parameters['sprite_table'], (18, 6)),
         ]
 
 

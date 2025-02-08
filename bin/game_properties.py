@@ -35,6 +35,11 @@ class Properties:
             pass
         return frames
 
+    def draw_rect_alpha(self, screen, color, rect):
+        shape_surf = pygame.Surface(pygame.Rect(rect).size, pygame.SRCALPHA)
+        pygame.draw.rect(shape_surf, color, shape_surf.get_rect())
+        screen.blit(shape_surf, rect)
+
     def run(self):
         # Основной цикл
         clock = pygame.time.Clock()
@@ -60,6 +65,8 @@ class Properties:
             if current_time - last_frame_time >= frame_duration:  # Проверяем, прошло ли достаточно времени
                 current_frame = (current_frame + 1) % self.num_frames  # Переход к следующему кадру
                 last_frame_time = current_time  # Обновляем время последнего кадра
+
+            self.draw_rect_alpha(self.screen, (0, 0, 0, 100), (0, 0, settings.width, settings.height))
 
             # Отрисовка кнопок для громкости музыки
             button_width = int(settings.width * 0.25)
