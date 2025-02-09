@@ -1,3 +1,4 @@
+from bin.audio import Audio
 from bin.settings import settings
 import pygame
 import math
@@ -7,10 +8,13 @@ from bin.ray_casting import mapping
 
 class Player:
     def __init__(self):
+        self.audio = Audio()
         self.x, self.y = settings.player_pos
         self.angle = settings.player_angle
         self.side = 50
         self.rect = pygame.Rect(*settings.player_pos, self.side, self.side)
+        self.open_door_sound = self.audio.run_sound('resources/sounds/open_door.mp3', settings.volume_sound)
+        self.can_open_door = True
 
     @property
     def pos(self):
@@ -27,6 +31,16 @@ class Player:
             if (sx1, sx2) in world_map:
                 if world_map[(sx1, sx2)] == '1':
                     dx = 0
+                    self.can_open_door = True
+                if world_map[(sx1, sx2)] == '2' and self.can_open_door:
+                    self.open_door_sound.play()
+                    self.can_open_door = False
+                else:
+                    self.can_open_door = True
+                if world_map[(sx1, sx2)] == '3':
+                    settings.second_floor = True
+                    settings.first_floor = False
+                    self.can_open_door = True
         if dy != 0:
             delta_y = (self.side // 2) * abs(dy) / dy
             fy1, fy2 = mapping(self.x + delta_y, self.y + dy + delta_y)

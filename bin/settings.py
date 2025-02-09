@@ -15,6 +15,7 @@ class Settings:
         self.tile = 100
         self.reboot = True
         self.prehistory = False
+        self.first_floor, self.second_floor = True, False
 
         # громкость музыки и звуков
         self.volume_music = 0.5
