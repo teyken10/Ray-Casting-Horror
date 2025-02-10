@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="add documents">
-      <change afterPath="$PROJECT_DIR$/bin/end_game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/data/time.txt" afterDir="false" />
+    <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/drawing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/end_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/end_game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/prehistory.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/prehistory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/ray_casting.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ray_casting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/maps/second_floor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/maps/second_floor.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/textures/enter.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/textures/exit.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/sprite_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/sprite_objects.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/data/time.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/data/time.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/maps/first_floor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/maps/first_floor.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +217,23 @@
       <option name="project" value="LOCAL" />
       <updated>1739067162891</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="done">
+      <option name="closed" value="true" />
+      <created>1739163135155</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739163135155</updated>
+    </task>
+    <task id="LOCAL-00016" summary="done">
+      <option name="closed" value="true" />
+      <created>1739163212208</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739163212208</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,6 +254,7 @@
     <MESSAGE value="animation sprites and modified settings" />
     <MESSAGE value="up" />
     <MESSAGE value="add documents" />
-    <option name="LAST_COMMIT_MESSAGE" value="add documents" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
 </project>

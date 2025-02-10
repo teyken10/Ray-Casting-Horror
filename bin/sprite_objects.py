@@ -39,6 +39,7 @@ class Sprites:
         }
         self.list_of_objects = [
             SpriteObject(self.sprite_parameters['sprite_devil'], (5, 15)),
+            SpriteObject(self.sprite_parameters['sprite_devil'], (30, 35)),
             # SpriteObject(self.sprite_parameters['sprite_table'], (20, 3)),
             # SpriteObject(self.sprite_parameters['sprite_table'], (20, 4.5)),
             # SpriteObject(self.sprite_parameters['sprite_table'], (20, 6)),

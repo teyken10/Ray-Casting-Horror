@@ -50,6 +50,8 @@ class Player:
                     else:
                         settings.floor = 1
                     settings.change_floor = True
+                if world_map[(sx1, sx2)] == '4':
+                    settings.end_game = True
         if dy != 0:
             delta_y = (self.side // 2) * abs(dy) / dy
             fy1, fy2 = mapping(self.x + delta_y, self.y + dy + delta_y)
@@ -63,6 +65,8 @@ class Player:
                     else:
                         settings.floor = 1
                     settings.change_floor = True
+                if world_map[(fy1, fy2)] == '4':
+                    settings.end_game = True
             if (sy1, sy2) in world_map:
                 if world_map[(sy1, sy2)] == '1':
                     dy = 0
@@ -72,6 +76,8 @@ class Player:
                     else:
                         settings.floor = 1
                     settings.change_floor = True
+                if world_map[(sy1, sy2)] == '4':
+                    settings.end_game = True
         self.x += dx
         self.y += dy
 

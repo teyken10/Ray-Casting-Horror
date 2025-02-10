@@ -1,5 +1,3 @@
-from asyncore import write
-
 import pygame
 import time
 from bin.drawing import Drawing
@@ -17,9 +15,9 @@ class Game:
         self.audio = Audio()
         self.main_menu = main_menu
         self.button_bg = pygame.image.load("resources/pics/vignette.png").convert_alpha()
-        pygame.display.set_caption("TeXnoPark")
 
     def run(self):
+        pygame.display.set_caption("TeXnoPark")
         pygame.mouse.set_visible(False)
         pygame.event.set_grab(True)
         pygame.init()
