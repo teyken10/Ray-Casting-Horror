@@ -2,7 +2,7 @@ import math
 
 import pygame
 from bin.settings import settings
-from bin.map import world_map, WORLD_WIDTH, WORLD_HEIGHT
+from bin.map import load_map, first_floor, second_floor, WORLD_WIDTH, WORLD_HEIGHT
 
 tile = settings.tile
 
@@ -12,6 +12,11 @@ def mapping(a, b):
 
 
 def ray_casting(player, textures):
+    world_map = None
+    if settings.floor == 1:
+        world_map = load_map(first_floor)[1]
+    elif settings.floor == 2:
+        world_map = load_map(second_floor)[1]
     walls = []
     ox, oy = player.pos
     texture_v, texture_h = '1', '1'

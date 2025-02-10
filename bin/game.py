@@ -1,4 +1,7 @@
+from asyncore import write
+
 import pygame
+import time
 from bin.drawing import Drawing
 from bin.map import first_floor
 from bin.settings import settings
@@ -6,6 +9,7 @@ from bin.player import Player
 from bin.sprite_objects import *
 from bin.ray_casting import ray_casting
 from bin.audio import Audio
+from bin.end_game import End
 
 
 class Game:
@@ -13,6 +17,7 @@ class Game:
         self.audio = Audio()
         self.main_menu = main_menu
         self.button_bg = pygame.image.load("resources/pics/vignette.png").convert_alpha()
+        pygame.display.set_caption("TeXnoPark")
 
     def run(self):
         pygame.mouse.set_visible(False)
@@ -23,7 +28,9 @@ class Game:
         clock = pygame.time.Clock()
         player = Player()
         drawing = Drawing(screen)
+        end = End()
         game_music = self.audio.run_music('resources/music/game_music.mp3', settings.volume_music)
+        start_time = time.time()
 
         running = True
         while running:
@@ -39,6 +46,17 @@ class Game:
             player.movement()
             screen.fill(settings.black)
 
+            if settings.change_floor:
+                running = False
+                settings.change_floor = False
+                game_music.stop()
+            if settings.end_game:
+                end_time = time.time()
+                execution_time = end_time - start_time
+                with open('resources/data/time.txt', 'w', encoding='utf-8') as f:
+                    f.write(f'{int(execution_time)}')
+                running = False
+                end.run()
             # drawing.background(player.angle)
             pygame.draw.rect(screen, settings.darkred, (0, 0, settings.width, settings.half_height))
             pygame.draw.rect(screen, settings.darkgray, (0, settings.half_height, settings.width, settings.half_height))

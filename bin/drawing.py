@@ -11,7 +11,7 @@ class Drawing:
         self.textures = {'1': pygame.image.load('resources/textures/wall.png').convert(),
                          '2': pygame.image.load('resources/textures/door.png').convert(),
                          '3': pygame.image.load('resources/textures/up-stairs.png').convert(),
-                         '4': pygame.image.load('resources/textures/enter.png').convert(),
+                         '4': pygame.image.load('resources/textures/exit.png').convert(),
                          'S': pygame.image.load('resources/textures/sky.png').convert()
                          }
 

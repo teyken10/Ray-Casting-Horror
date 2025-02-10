@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="up">
+    <list default="true" id="917fb173-042b-4789-b3c3-cd3b247ffd75" name="Changes" comment="add documents">
+      <change afterPath="$PROJECT_DIR$/bin/end_game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/data/time.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/drawing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/game.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/player.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/prehistory.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/prehistory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ray_casting.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ray_casting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/bin/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/maps/second_floor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/maps/second_floor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/textures/enter.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/textures/exit.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,36 +56,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python._pydev_execfile.executor&quot;: &quot;Run&quot;,
-    &quot;Python.game.executor&quot;: &quot;Run&quot;,
-    &quot;Python.game_properties.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main_menu.executor&quot;: &quot;Run&quot;,
-    &quot;Python.map.executor&quot;: &quot;Run&quot;,
-    &quot;Python.player.executor&quot;: &quot;Run&quot;,
-    &quot;Python.prehistory.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ray_casting.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.resource_manager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.settings.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Shell Script.main.py.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Ray-Casting-Horror/resources/sounds&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python._pydev_execfile.executor": "Run",
+    "Python.end_game.executor": "Run",
+    "Python.game.executor": "Run",
+    "Python.game_properties.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.main.py.executor": "Run",
+    "Python.main_menu.executor": "Run",
+    "Python.map.executor": "Run",
+    "Python.player.executor": "Run",
+    "Python.prehistory.executor": "Run",
+    "Python.ray_casting.executor": "Debug",
+    "Python.resource_manager.executor": "Run",
+    "Python.settings.executor": "Run",
+    "Python.tests.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Shell Script.main.py.executor": "Run",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Ray-Casting-Horror/Documents",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Ray-Casting-Horror\Documents" />
       <recent name="D:\Ray-Casting-Horror\resources\sounds" />
       <recent name="D:\Ray-Casting-Horror\resources\pics" />
       <recent name="D:\Ray-Casting-Horror\resources\textures" />
       <recent name="D:\Ray-Casting-Horror\resources" />
-      <recent name="D:\Ray-Casting-Horror\resourses" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Ray-Casting-Horror\resources\pics" />
@@ -204,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739021681879</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add documents">
+      <option name="closed" value="true" />
+      <created>1739067162891</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739067162891</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,6 +244,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="animation sprites and modified settings" />
     <MESSAGE value="up" />
-    <option name="LAST_COMMIT_MESSAGE" value="up" />
+    <MESSAGE value="add documents" />
+    <option name="LAST_COMMIT_MESSAGE" value="add documents" />
   </component>
 </project>

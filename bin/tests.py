@@ -1,19 +1,11 @@
-import pygame
+import time
 
-pygame.init()
-screen = pygame.display.set_mode((800, 800))
-clock = pygame.time.Clock()
+# Считываем текущее время в секундах с начала эпохи (1 января 1970)
+current_time = time.time()
+print(f"Текущее время: {current_time} секунд с начала эпохи.")
 
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            exit()
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                running = False  # Выход из игры
-        print(event)
-
-    screen.fill((0, 0, 0))
-    pygame.draw.rect(screen, (255, 255, 255),
-                     (20, 20, 100, 75))
+# Засекаем время выполнения какого-либо кода
+start_time = time.time()
+end_time = time.time()
+execution_time = end_time - start_time
+print(f"Время выполнения: {execution_time} секунд.")

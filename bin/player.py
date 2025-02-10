@@ -2,7 +2,7 @@ from bin.audio import Audio
 from bin.settings import settings
 import pygame
 import math
-from bin.map import world_map
+from bin.map import load_map, first_floor, second_floor
 from bin.ray_casting import mapping
 
 
@@ -21,6 +21,11 @@ class Player:
         return (self.x, self.y)
 
     def detect_collision(self, dx, dy):
+        world_map = None
+        if settings.floor == 1:
+            world_map = load_map(first_floor)[1]
+        elif settings.floor == 2:
+            world_map = load_map(second_floor)[1]
         if dx != 0:
             delta_x = (self.side // 2) * abs(dx) / dx
             fx1, fx2 = mapping(self.x + dx + delta_x, self.y + delta_x)
@@ -28,19 +33,23 @@ class Player:
             if (fx1, fx2) in world_map:
                 if world_map[(fx1, fx2)] == '1':
                     dx = 0
+                if world_map[(fx1, fx2)] == '3':
+                    if settings.floor == 1:
+                        settings.floor = 2
+                    else:
+                        settings.floor = 1
+                    settings.change_floor = True
+                if world_map[(fx1, fx2)] == '4':
+                    settings.end_game = True
             if (sx1, sx2) in world_map:
                 if world_map[(sx1, sx2)] == '1':
                     dx = 0
-                    self.can_open_door = True
-                if world_map[(sx1, sx2)] == '2' and self.can_open_door:
-                    self.open_door_sound.play()
-                    self.can_open_door = False
-                else:
-                    self.can_open_door = True
                 if world_map[(sx1, sx2)] == '3':
-                    settings.second_floor = True
-                    settings.first_floor = False
-                    self.can_open_door = True
+                    if settings.floor == 1:
+                        settings.floor = 2
+                    else:
+                        settings.floor = 1
+                    settings.change_floor = True
         if dy != 0:
             delta_y = (self.side // 2) * abs(dy) / dy
             fy1, fy2 = mapping(self.x + delta_y, self.y + dy + delta_y)
@@ -48,9 +57,21 @@ class Player:
             if (fy1, fy2) in world_map:
                 if world_map[(fy1, fy2)] == '1':
                     dy = 0
+                if world_map[(fy1, fy2)] == '3':
+                    if settings.floor == 1:
+                        settings.floor = 2
+                    else:
+                        settings.floor = 1
+                    settings.change_floor = True
             if (sy1, sy2) in world_map:
                 if world_map[(sy1, sy2)] == '1':
                     dy = 0
+                if world_map[(sy1, sy2)] == '3':
+                    if settings.floor == 1:
+                        settings.floor = 2
+                    else:
+                        settings.floor = 1
+                    settings.change_floor = True
         self.x += dx
         self.y += dy
 

@@ -15,7 +15,9 @@ class Settings:
         self.tile = 100
         self.reboot = True
         self.prehistory = False
-        self.first_floor, self.second_floor = True, False
+        self.floor = 2
+        self.change_floor = False
+        self.end_game = False
 
         # громкость музыки и звуков
         self.volume_music = 0.5
@@ -43,9 +45,9 @@ class Settings:
         self.texture_scale = self.texture_width // self.tile
 
         # настройки игрока
-        self.player_pos = self.half_width, self.half_height
+        self.player_pos = self.half_width - 400, self.half_height + 450
         self.player_angle = 0
-        self.player_speed = 165 / self.fps + 0.5
+        self.player_speed = 165 / self.fps + 2
         self.sensitivity = 0.003
 
         # цвета

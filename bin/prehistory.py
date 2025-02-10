@@ -10,6 +10,7 @@ class Prehistory:
         self.screen = pygame.display.set_mode((settings.width, settings.height))
         self.audio = Audio()
         self.game = Game(main_menu)
+        pygame.display.set_caption("Prehistory (E/Q - skip scenes)")
         self.next_page_sound = self.audio.run_sound('resources/sounds/next-page.mp3', settings.volume_sound)
         self.kolokol_sound = self.audio.run_sound('resources/sounds/kolokol.mp3', settings.volume_sound)
         self.first_scene = pygame.image.load("resources/pics/first-scene.png").convert_alpha()
